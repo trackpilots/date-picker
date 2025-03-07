@@ -1,4 +1,4 @@
-# @trackpilots/searchable-select-dropdown  
+# @trackpilots/date-picker
 
 ![npm](https://img.shields.io/npm/v/@trackpilots/date-picker?style=flat-square)
 ![license](https://img.shields.io/npm/l/@trackpilots/date-picker?style=flat-square)
