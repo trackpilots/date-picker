@@ -7,9 +7,7 @@
 A **customizable date picker** component built with**React** and **Tailwind CSS**.
 
 ## 📸 Screenshots
-
-![Screenshot Preview](assets/screenshot_preview.png) ![Screenshots](assets/screenshots.png)
-
+![Screenshot](assets/screenshots.png)
 ---
 
 ## 🚀 Installation  
@@ -41,7 +39,7 @@ const App = () => {
 
   const handleChoose = (date) => {
     setChosenDate(date);
-    console.log("Finalized Date:", date);
+    console.log("Choosed Date:", date);
   };
 
   return (
@@ -54,8 +52,8 @@ const App = () => {
         onChoose={handleChoose}
         selectedColor="#FF5733"
       />
-      <p className="mt-2">Selected Date: {selectedDate ? selectedDate.toDateString() : "None"}</p>
-      <p>Finalized Date: {chosenDate ? chosenDate.toDateString() : "None"}</p>
+      <p className="mt-2">Choosed Date: {chosenDate ? chosenDate.toDateString() : "None"}</p>
+      <p>Selected Date: {selectedDate ? selectedDate.toDateString() : "None"}</p>
     </div>
   );
 };
@@ -73,14 +71,15 @@ export default App;
 | `onChoose`    | `function`        | `() => {}`     | Triggered when a date is choosed. |
 | `selectedColor` | `string`        | `"#9D55FF"`    | Highlight color for the selected date. |
 | `icon`        | `React.ElementType` | `IoCalendarOutline` | Custom calendar icon component. |
+---
 
-### **✨ Example**  
+## **✨ Example**  
 ```sh
 <DateFilter 
   startDate={new Date("2024-06-01")} 
   endDate={new Date("2024-06-30")} 
   onSelect={(date) => console.log("User selected:", date)} 
-  onChoose={(date) => console.log("User finalized:", date)} 
+  onChoose={(date) => console.log("User Choosed:", date)} 
   selectedColor="#007BFF"
 />
 ```
