@@ -1,35 +1,48 @@
 {
   "name": "@trackpilots/date-picker",
   "version": "1.0.7",
-  "description": "A custom React Date Filter component",
-  "main": "src/index.js",
-  "module": "src/index.js",
-  "keywords": [
-    "react",
-    "datepicker",
-    "filter",
-    "react-datepicker"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
-  "dependencies": {
-    "react": "^17.0.0",
-    "react-datepicker": "^4.0.0",
-    "tailwindcss": "^3.0.0"
-  },
-  "peerDependencies": {
-    "react": "^17.0.0"
-  },
+  "description": "A customizable date picker component for React, built with Tailwind CSS.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack serve --mode development",
+    "build": "tsc && rollup -c",
+    "dev": "vite",
+    "start": "vite",
     "test": "jest",
-    "publish": "npm publish --access public"
+    "lint": "eslint src --fix",
+    "prepare": "husky install"
+  },
+  "keywords": ["react", "date-picker", "calendar", "trackpilots", "datepicker", "ui-component"],
+  "author": "Track Pilots",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "react-icons": "^4.11.0",
+    "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
-    "babel-loader": "^8.0.0",
-    "jest": "^29.0.0",
-    "webpack": "^5.0.0",
-    "webpack-cli": "^6.0.1"
-  }
+    "vite": "^5.0.0",
+    "typescript": "^5.2.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.6.4",
+    "husky": "^8.0.3",
+    "rollup": "^3.29.4"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trackpilots/date-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trackpilots/date-picker/issues"
+  },
+  "homepage": "https://quickappstudio.com/our-team"
 }
