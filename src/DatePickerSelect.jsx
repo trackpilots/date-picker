@@ -4,7 +4,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import { IoCalendarOutline } from "react-icons/io5";
 
 const options = { year: "numeric", month: "short", day: "numeric" };
-
 const leftFilters = ["Today", "Yesterday", "Last 7 Days", "Last Week"];
 const rightFilters = ["This Week", "This Month", "Last Month", "Custom Range"];
 

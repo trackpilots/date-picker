@@ -62,10 +62,14 @@ const App = () => {
 export default App;
 ```
 
+## 📌 DateFilter Component
+A React Date Filter component that allows users to select predefined date ranges like "Today", "Yesterday", "Last 7 Days", etc., or choose a custom range.
+
 ## ⚙️ Props  
 
 | Prop Name      | Type              | Default          | Description                          |
 |---------------|------------------|----------------|----------------------------------|
+| `defaultChoosenDate`   | `string` or `null`  | `Todat` | Predefined date range selection (e.g.,"Today", "Yesterday", "Last 7 Days", "Last Week","This Week", "This Month", "Last Month", "Custom Range").|
 | `startDate`   | `Date` or `null`  | `null`         | The starting date of the picker. |
 | `endDate`     | `Date` or `null`  | `null`         | The ending date of the picker.   |
 | `onSelect`    | `function`        | `() => {}`     | Triggered when a date is selected. |
