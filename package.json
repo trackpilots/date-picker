@@ -1,6 +1,6 @@
 {
   "name": "@trackpilots/date-picker",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A custom React Date Filter component",
   "main": "src/index.js",
   "module": "src/index.js",
