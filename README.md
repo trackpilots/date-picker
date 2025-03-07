@@ -4,7 +4,7 @@
 ![license](https://img.shields.io/npm/l/@trackpilots/date-picker?style=flat-square)
 ![downloads](https://img.shields.io/npm/dt/@trackpilots/date-picker?style=flat-square)
 
-A **customizable date picker** component built with**React** and **Tailwind CSS**.
+A **customizable date picker** component built with **React** and **Tailwind CSS**.
 
 ## ✨ Screenshots  
 

@@ -222,7 +222,7 @@ const DatePickerSelect = ({
           </div>
 
           <div className="pl-4 flex flex-col">
-            <div className="font-semibold mb-2">Quick Filters</div>
+            <div className="font-semibold mb-2">Filter by Period</div>
             <div className="flex">
               <div className="mr-4 flex flex-col">
                 {leftFilters.map((value, index) => (
