@@ -1,6 +1,6 @@
 {
   "name": "@trackpilots/date-picker",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A customizable date picker component for React, built with Tailwind CSS.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -13,7 +13,14 @@
     "lint": "eslint src --fix",
     "prepare": "husky install"
   },
-  "keywords": ["react", "date-picker", "calendar", "trackpilots", "datepicker", "ui-component"],
+  "keywords": [
+    "react",
+    "date-picker",
+    "calendar",
+    "trackpilots",
+    "datepicker",
+    "ui-component"
+  ],
   "author": "Track Pilots",
   "license": "MIT",
   "peerDependencies": {
