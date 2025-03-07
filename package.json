@@ -2,9 +2,13 @@
   "name": "@trackpilots/date-picker",
   "version": "1.0.19",
   "description": "A customizable date picker component for React, built with Tailwind CSS.",
-  "main": "src/index.js",
-  "module": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "dist/bundle.js",
+  "module": "dist/bundle.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/bundle.js",
+    "require": "./dist/bundle.js"
+  },
   "scripts": {
     "build": "webpack --mode=production",
     "dev": "webpack --mode=development --watch",
