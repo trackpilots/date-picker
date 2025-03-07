@@ -1,6 +1,6 @@
 {
   "name": "@trackpilots/date-picker",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "A customizable date picker component for React, built with Tailwind CSS.",
   "main": "dist/bundle.js",
   "module": "dist/bundle.js",
