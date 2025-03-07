@@ -1,4 +1,4 @@
 // src/index.js
-import DatePicker from './DatePicker.jsx';
+import DatePickerSelect from './DatePickerSelect.jsx';
 
-export { DatePicker };
+export { DatePickerSelect };

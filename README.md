@@ -1,8 +1,96 @@
-# My React Date Filter
+# @trackpilots/searchable-select-dropdown  
 
-This is a custom React date filter component that allows you to filter by specific date ranges like "Today", "Last 7 Days", etc.
+![npm](https://img.shields.io/npm/v/@trackpilots/date-picker?style=flat-square)
+![license](https://img.shields.io/npm/l/@trackpilots/date-picker?style=flat-square)
+![downloads](https://img.shields.io/npm/dt/@trackpilots/date-picker?style=flat-square)
 
-## Installation
+A **customizable date picker** component built with**React** and **Tailwind CSS**.
 
-```bash
+![Screenshot](assets/screenshots.png)
+---
+
+## 🚀 Installation  
+You can install the package using **npm** or **yarn**:  
+
+### **Using npm**  
+```sh
 npm install @trackpilots/date-picker
+# or
+yarn add @trackpilots/date-picker
+```
+
+Make sure Tailwind CSS is installed in your project.
+
+##  📌 Usage
+Use in Your Component
+```sh
+import React, { useState } from "react";
+import DateFilter from "@trackpilots/date-picker";
+
+const App = () => {
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [chosenDate, setChosenDate] = useState(null);
+
+  const handleSelect = (date) => {
+    setSelectedDate(date);
+    console.log("Selected Date:", date);
+  };
+
+  const handleChoose = (date) => {
+    setChosenDate(date);
+    console.log("Finalized Date:", date);
+  };
+
+  return (
+    <div className="p-4">
+      <h2 className="text-lg font-bold">Date Picker</h2>
+      <DateFilter
+        startDate={new Date("2024-01-01")}
+        endDate={new Date("2024-12-31")}
+        onSelect={handleSelect}
+        onChoose={handleChoose}
+        selectedColor="#FF5733"
+      />
+      <p className="mt-2">Selected Date: {selectedDate ? selectedDate.toDateString() : "None"}</p>
+      <p>Finalized Date: {chosenDate ? chosenDate.toDateString() : "None"}</p>
+    </div>
+  );
+};
+
+export default App;
+```
+
+## ⚙️ Props  
+
+| Prop Name      | Type              | Default          | Description                          |
+|---------------|------------------|----------------|----------------------------------|
+| `startDate`   | `Date` or `null`  | `null`         | The starting date of the picker. |
+| `endDate`     | `Date` or `null`  | `null`         | The ending date of the picker.   |
+| `onSelect`    | `function`        | `() => {}`     | Triggered when a date is selected. |
+| `onChoose`    | `function`        | `() => {}`     | Triggered when a date is choosed. |
+| `selectedColor` | `string`        | `"#9D55FF"`    | Highlight color for the selected date. |
+| `icon`        | `React.ElementType` | `IoCalendarOutline` | Custom calendar icon component. |
+
+### **✨ Example**  
+```sh
+<DateFilter 
+  startDate={new Date("2024-06-01")} 
+  endDate={new Date("2024-06-30")} 
+  onSelect={(date) => console.log("User selected:", date)} 
+  onChoose={(date) => console.log("User finalized:", date)} 
+  selectedColor="#007BFF"
+/>
+```
+
+## 📦 Dependencies  
+
+- [React](https://react.dev/)  
+- [Tailwind CSS](https://tailwindcss.com/)  
+- [react-icons](https://react-icons.github.io/react-icons/) (for `IoCalendarOutline` icon)  
+
+
+## 📌 Maintainers
+These packages are maintained by [**Quick App Studio**](https://quickappstudio.com/our-team) Developers.
+
+##  📄 License
+This project is licensed under the MIT License.

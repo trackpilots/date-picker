@@ -12,6 +12,7 @@ const DatePickerSelect = ({
   startDate,
   endDate,
   onSelect,
+  onChoose,
   selectedColor,
   icon: Icon,
 }) => {
@@ -59,14 +60,13 @@ const DatePickerSelect = ({
   }, [isOpen]);
 
   const handleChooseDate = ({ date, value, choosenString }) => {
-    console.log("choosenString", choosenString);
     setChoosenDate(date);
     setChoosenValue(choosenString);
     setPendingSelection({ date, value });
+    onChoose({ date, value })
   };
 
   const handleApply = () => {
-    console.log("pendingSelection", pendingSelection);
     if (pendingSelection) {
       setChoosenDate(pendingSelection.date);
       setChoosenValue(choosenValue);
@@ -228,11 +228,10 @@ const DatePickerSelect = ({
                 {leftFilters.map((value, index) => (
                   <button
                     key={`${index}-Index`}
-                    className={`px-2 py-1 rounded my-1 min-w-[140px] ${
-                      choosenDate === value
-                        ? `border-[${selectedColor}] border-2 text-[${selectedColor}] font-semibold`
-                        : "border-gray-300 text-black"
-                    } bg-gray-100 rounded-md text-sm transition-all`}
+                    className={`px-2 py-1 rounded my-1 min-w-[140px] border-2 bg-gray-100 rounded-md text-sm transition-all ${
+                      choosenDate === value ? " font-semibold" : "border-gray-300 text-black"
+                    }`}
+                    style={choosenDate === value ? { borderColor: selectedColor, color: selectedColor } : {}}
                     onClick={() => handleQuickFilter(value)}
                   >
                     {value}
@@ -244,11 +243,10 @@ const DatePickerSelect = ({
                 {rightFilters.map((value, index) => (
                   <button
                     key={`${index}-Index`}
-                    className={`px-2 py-1 rounded my-1 min-w-[140px] ${
-                        choosenDate === value
-                          ? `border-[${selectedColor}] border-2 text-[${selectedColor}] font-semibold`
-                          : "border-gray-300 text-black"
-                      } bg-gray-100 rounded-md text-sm transition-all`}
+                    className={`px-2 py-1 rounded my-1 min-w-[140px] border-2 bg-gray-100 rounded-md text-sm transition-all ${
+                      choosenDate === value ? " font-semibold" : "border-gray-300 text-black"
+                    }`}
+                    style={choosenDate === value ? { borderColor: selectedColor, color: selectedColor } : {}}
                     onClick={() => handleQuickFilter(value)}
                   >
                     {value}
@@ -316,11 +314,12 @@ const DatePickerSelect = ({
   );
 };
 
-DatePickerSelect.defaultProps = {
+DateFilter.defaultProps = {
   startDate: null, // Default to null if no startDate is provided
   endDate: null, // Default to null if no endDate is provided
   onSelect: () => {}, // Prevents "onSelect is not a function" error
-  selectedColor: "#25d642",
+  onChoose:() => {}, // Prevents "onChoose is not a function" error
+  selectedColor: "#9D55FF",
   icon: IoCalendarOutline,
 };
 
