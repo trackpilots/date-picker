@@ -323,7 +323,7 @@ const DateFilter = ({
 };
 
 DateFilter.defaultProps = {
-  defaultChoosenDate:"Yesterday",
+  defaultChoosenDate:"Today",
   startDate: null, // Default to null if no startDate is provided
   endDate: null, // Default to null if no endDate is provided
   onSelect: () => {}, // Prevents "onSelect is not a function" error
