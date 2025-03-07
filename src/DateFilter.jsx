@@ -52,6 +52,7 @@ const DateFilter = ({
         !buttonRef.current.contains(event.target)
       ) {
         setIsOpen(false);
+        handleQuickFilter(prevChoosenDate); 
       }
     };
 
