@@ -47,8 +47,7 @@ const App = () => {
     <div className="p-4">
       <h2 className="text-lg font-bold">Date Picker</h2>
       <DateFilter
-        startDate={new Date("2024-01-01")}
-        endDate={new Date("2024-12-31")}
+        defaultChoosenDate={"This Month"}
         onSelect={handleSelect}
         onChoose={handleChoose}
         selectedColor="#FF5733"
