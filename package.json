@@ -8,7 +8,9 @@
     "dev": "webpack --mode=development --watch",
     "start": "webpack serve --mode=development",
     "test": "jest",
-    "lint": "eslint src --fix"
+    "lint": "eslint src --fix",
+    "patch": "npm version patch",
+    "publish": "npm publish --access public"
   },
   "keywords": [
     "react",
