@@ -6,7 +6,10 @@
 
 A **customizable date picker** component built with**React** and **Tailwind CSS**.
 
-![Screenshot](assets/screenshots.png)
+## 📸 Screenshots
+
+![Screenshot Preview](assets/screenshot_preview.png) ![Screenshots](assets/screenshots.png)
+
 ---
 
 ## 🚀 Installation  
