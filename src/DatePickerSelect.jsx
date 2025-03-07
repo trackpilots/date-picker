@@ -9,6 +9,7 @@ const leftFilters = ["Today", "Yesterday", "Last 7 Days", "Last Week"];
 const rightFilters = ["This Week", "This Month", "Last Month", "Custom Range"];
 
 const DatePickerSelect = ({
+  defaultChoosenDate,
   startDate,
   endDate,
   onSelect,
@@ -20,13 +21,20 @@ const DatePickerSelect = ({
   const buttonRef = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
-  const [choosenDate, setChoosenDate] = useState("Today");
+  const [choosenDate, setChoosenDate] = useState(defaultChoosenDate);
   const [choosenValue, setChoosenValue] = useState("");
   const [pendingSelection, setPendingSelection] = useState(null);
 
   // Store previous values before opening modal
   const [prevChoosenDate, setPrevChoosenDate] = useState("Today");
   const [prevChoosenValue, setPrevChoosenValue] = useState("");
+
+    // Sync choosenDate prop with state
+    useEffect(() => {
+      if (defaultChoosenDate) {
+        handleQuickFilter(defaultChoosenDate); // Automatically set startDate/endDate based on choosenDate
+      }
+    }, [defaultChoosenDate]);
 
   useEffect(() => {
     if (startDate) {
@@ -314,7 +322,8 @@ const DatePickerSelect = ({
   );
 };
 
-DateFilter.defaultProps = {
+DatePickerSelect.defaultProps = {
+  defaultChoosenDate:"Today",
   startDate: null, // Default to null if no startDate is provided
   endDate: null, // Default to null if no endDate is provided
   onSelect: () => {}, // Prevents "onSelect is not a function" error
