@@ -87,6 +87,7 @@ const DatePickerSelect = ({
     setChoosenDate(prevChoosenDate);
     setChoosenValue(prevChoosenValue);
     setIsOpen(false);
+    handleQuickFilter(prevChoosenDate); 
   };
 
   const handleQuickFilter = (filter) => {
@@ -323,7 +324,7 @@ const DatePickerSelect = ({
 };
 
 DatePickerSelect.defaultProps = {
-  defaultChoosenDate:"Today",
+  defaultChoosenDate:"Yesterday",
   startDate: null, // Default to null if no startDate is provided
   endDate: null, // Default to null if no endDate is provided
   onSelect: () => {}, // Prevents "onSelect is not a function" error
