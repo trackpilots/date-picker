@@ -1,6 +1,6 @@
 {
   "name": "@trackpilots/date-picker",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A customizable date picker component for React, built with Tailwind CSS.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
