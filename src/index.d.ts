@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import { IconType } from "react-icons";
 
 export interface DateFilterProps {
+  defaultChoosenDate?: string | null;
   startDate?: Date | null;
   endDate?: Date | null;
   onSelect?: (date: Date | null) => void;

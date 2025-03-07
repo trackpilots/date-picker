@@ -7,7 +7,7 @@ const options = { year: "numeric", month: "short", day: "numeric" };
 const leftFilters = ["Today", "Yesterday", "Last 7 Days", "Last Week"];
 const rightFilters = ["This Week", "This Month", "Last Month", "Custom Range"];
 
-const DatePickerSelect = ({
+const DateFilter = ({
   defaultChoosenDate,
   startDate,
   endDate,
@@ -322,7 +322,7 @@ const DatePickerSelect = ({
   );
 };
 
-DatePickerSelect.defaultProps = {
+DateFilter.defaultProps = {
   defaultChoosenDate:"Yesterday",
   startDate: null, // Default to null if no startDate is provided
   endDate: null, // Default to null if no endDate is provided
@@ -332,4 +332,4 @@ DatePickerSelect.defaultProps = {
   icon: IoCalendarOutline,
 };
 
-export default DatePickerSelect;
+export default DateFilter;

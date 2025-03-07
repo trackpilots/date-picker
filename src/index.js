@@ -1,5 +1,5 @@
 // src/index.js
-import DatePickerSelect from './DatePickerSelect.jsx';
+import DateFilter from './DateFilter.jsx';
 import "./styles/tailwind.css";
 
-export { DatePickerSelect };
+export { DateFilter };
