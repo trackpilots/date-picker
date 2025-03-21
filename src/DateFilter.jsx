@@ -171,7 +171,7 @@ const DateFilter = ({
           setPrevChoosenValue(choosenValue);
           setIsOpen(!isOpen);
         }}
-        className="border-2 rounded-full text-gray-600 py-2 px-6 flex w-58 items-center gap-2"
+        className="border-2 rounded-full text-gray-600 py-2 px-6 flex w-58 items-center gap-2 bg-white"
       >
         <span>
           <Icon />
