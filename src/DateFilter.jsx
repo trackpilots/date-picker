@@ -15,6 +15,7 @@ const DateFilter = ({
   onChoose,
   selectedColor,
   icon: Icon,
+  position
 }) => {
   const modalRef = useRef(null);
   const buttonRef = useRef(null);
@@ -182,7 +183,7 @@ const DateFilter = ({
       {isOpen && (
         <div
           ref={modalRef}
-          className="absolute right-0 mt-2 bg-white border rounded shadow-lg p-4 flex min-w-[400px]"
+          className={`absolute ${position === "right" ? "right-0" : "left-0"} mt-2 bg-white border rounded shadow-lg p-4 flex min-w-[400px] z-50`}
         >
           <div
             className={`border-r pr-4 
@@ -331,6 +332,7 @@ DateFilter.defaultProps = {
   onChoose:() => {}, // Prevents "onChoose is not a function" error
   selectedColor: "#9D55FF",
   icon: IoCalendarOutline,
+  position: "right"
 };
 
 export default DateFilter;
